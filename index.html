@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="https://image.flaticon.com/icons/png/512/1587/1587580.png">
+    <script src="https://kit.fontawesome.com/578007c2b3.js" crossorigin="anonymous"></script>
+    <title>Notes APP</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="container">
+
+        <div class="card border-0 shadow my-5">
+
+            <div class="card-body p-5">
+
+                <div id="titulo" class="col-sm-4">
+                    <h1 class="font-weight-light">Notes APP</h1>
+                    <h5 class="font-weight-light">Toma notas y nunca olvides </h5>
+                </div>
+
+                <div id="divBlanco">
+                    <div id="notas" class="row">
+
+                        <div id="listaNotas" class="col-md-6">
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="boton" class="row">
+                    <div class="col-md-12">
+                        <button id="botonCrearNota" type="button" class="btn btn-primary">Crear Nota</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="mostrarModal" class="modal" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+
+                        <h5 class="modal-title">Nota</h5>
+
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <label for="exampleFormControlTextarea1">Titulo</label>
+
+                        <input id="campoTitulo" class="form-control" type="text" placeholder="Titulo de la Nota">
+                        <hr>
+
+                        <label for="exampleFormControlTextarea1">Prioridad</label>
+
+                        <select class="form-control" id="campoCategoria">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5</option>
+                        </select>
+                        <hr>
+                        <label for="exampleFormControlTextarea1">Contenido de la nota</label>
+                        <textarea id="campoContenido" class="form-control" id="exampleFormControlTextarea1"
+                            rows="3"></textarea>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button id="guardarCambios" type="button" class="btn btn-primary">Guardar Cambios</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+        </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+        </script>
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>

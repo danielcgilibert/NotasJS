@@ -1,0 +1,35 @@
+version: "2"
+services:
+    www:
+        container_name: www
+        build: .
+        restart: always
+        ports:
+            - "80:80"
+        volumes:
+            - ../public/:/var/www/html
+        links:
+            - db:db
+        networks:
+            - default
+    db:
+        container_name: db
+        image: mariadb:latest
+        restart: always
+        ports:
+            - "3307:3306"
+        volumes:
+           - db-data:/var/lib/mysql
+        environment:
+            MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
+            TZ: Europe/Madrid
+    phpmyadmin:
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin
+        restart: always
+        links:
+            - db:db
+        ports:
+            - 81:80
+volumes:
+    db-data:
